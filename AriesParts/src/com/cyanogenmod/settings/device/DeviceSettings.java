@@ -19,6 +19,8 @@ public class DeviceSettings extends PreferenceActivity  {
     public static final String KEY_HSPA = "hspa";
     public static final String KEY_TVOUT_ENABLE = "tvout_enable";
     public static final String KEY_TVOUT_SYSTEM = "tvout_system";
+    public static final String KEY_TOUCHWAKE_EN = "touchwake_enable";
+    public static final String KEY_TOUCHWAKE_DEL = "touchwake_delay";
 
     private ColorTuningPreference mColorTuning;
     private ListPreference mMdnie;
@@ -27,6 +29,9 @@ public class DeviceSettings extends PreferenceActivity  {
     private CheckBoxPreference mTvOutEnable;
     private ListPreference mTvOutSystem;
     private TvOut mTvOut;
+    private TouchWake mTouchWake;
+    private CheckBoxPreference mTouchWakeEn;
+    private ListPreference mTouchWakeDel;
 
     private BroadcastReceiver mHeadsetReceiver = new BroadcastReceiver() {
 
@@ -49,6 +54,14 @@ public class DeviceSettings extends PreferenceActivity  {
         mMdnie = (ListPreference) findPreference(KEY_MDNIE);
         mMdnie.setEnabled(Mdnie.isSupported());
         mMdnie.setOnPreferenceChangeListener(new Mdnie());
+        
+        mTouchWake=new TouchWake();
+        mTouchWakeEn =  (CheckBoxPreference) findPreference(KEY_TOUCHWAKE_EN); 
+        mTouchWakeEn.setEnabled(TouchWake.isSupported());
+        mTouchWakeEn.setOnPreferenceChangeListener(mTouchWake);
+        
+        mTouchWakeDel = (ListPreference) findPreference(KEY_TOUCHWAKE_DEL);
+        mTouchWakeDel.setOnPreferenceChangeListener(mTouchWake);
 
         mBacklightTimeout = (ListPreference) findPreference(KEY_BACKLIGHT_TIMEOUT);
         mBacklightTimeout.setEnabled(TouchKeyBacklightTimeout.isSupported());

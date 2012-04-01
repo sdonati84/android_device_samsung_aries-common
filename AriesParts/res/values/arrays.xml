@@ -60,4 +60,27 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+ 
+    <string-array name="touchwake_delay_entries_values" translatable="true">
+        <item>0</item>
+        <item>20000</item>
+        <item>30000</item>
+        <item>40000</item>
+        <item>50000</item>
+        <item>60000</item>
+        <item>80000</item>
+        <item>120000</item>
+    </string-array>
+    
+    <string-array name="touchwake_delay_entries" translatable="true">
+        <item>Always enabled</item>
+        <item>20 seconds</item>
+        <item>30 seconds</item>
+        <item>40 seconds</item>
+        <item>50 seconds</item>
+        <item>60 seconds</item>
+        <item>80 seconds</item>
+        <item>120 seconds</item>
+    </string-array>
+    
 </resources>

@@ -29,4 +29,13 @@
     <string name="tvout_enable_summary_on">TV Out enabled</string>
     <string name="tvout_system_head">TV System</string>
     <string name="tvout_system_summary">Set your TV system for TV Out</string>
+    
+    <string name="category_touchwake_title">Touch Wake</string>
+    <string name="touchwake_enable_head">Enable Touch Wake</string>
+    <string name="touchwake_enable_summary_off">Touch Wake not enabled</string>
+    <string name="touchwake_enable_summary">Touch Wake not enabled</string>
+    <string name="touchwake_enable_summary_on">Touch Wake is active</string>
+    <string name="touchwake_delay_head">Maximum time</string>
+    <string name="touchwake_delay_summary">Touching display after this time will not wake display anymore</string>
+    
 </resources>

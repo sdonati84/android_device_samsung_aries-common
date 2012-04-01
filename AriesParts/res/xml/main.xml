@@ -43,6 +43,23 @@
 	</PreferenceCategory>
 
 	<PreferenceCategory
+		android:title="@string/category_touchwake_title">
+		<CheckBoxPreference
+			android:key="touchwake_enable"
+			android:title="@string/touchwake_enable_head"
+			android:summaryOn="@string/touchwake_enable_summary_on"
+			android:summaryOff="@string/touchwake_enable_summary_off"/>
+		<ListPreference
+			android:key="touchwake_delay"
+			android:title="@string/touchwake_delay_head"
+			android:summary="@string/touchwake_delay_summary"
+			android:entries="@array/touchwake_delay_entries"
+			android:entryValues="@array/touchwake_delay_entries_values"
+			android:defaultValue="2" 
+			android:dependency="touchwake_enable"/>
+	</PreferenceCategory>
+
+	<PreferenceCategory
 		android:title="@string/category_tvout_title">
 		<CheckBoxPreference
 			android:key="tvout_enable"
